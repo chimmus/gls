@@ -11,5 +11,7 @@ func main() {
 		path = os.Args[1]
 	}
 	entries, _ := os.ReadDir(path)
-	fmt.Println(entries)
+	for _, entries := range entries {
+		fmt.Println(entries.Name())
+	}
 }
